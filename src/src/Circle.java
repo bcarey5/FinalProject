@@ -29,7 +29,13 @@ public class Circle {
     int b = (int) Math.round(Math.random() * 255);
     return new Color(r, g, b);
   }
-
+  /**
+  Big O Analysis
+  This calculation is used to determine if the mouse
+  position is within the circle's area. 
+  This uses a^2 + b^2 = c^2 formula
+  Thus the Big O is f(n) = O(n^2)
+   */
   public boolean isCLicked(int mouseX, int mouseY) {
     double a = Math.pow(mouseX - x, 2);
     double b = Math.pow(mouseY - y, 2);
